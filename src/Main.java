@@ -22,10 +22,10 @@ public class Main {
         //display values
         System.out.println();
         System.out.println("---------------------");
-        System.out.println("Total Tip: $ " + totalTip);
-        System.out.println("Total Bill: $ " + totalBill);
-        System.out.println("Total Tip Per Person : $ " + tipPerPerson);
-        System.out.println("Total Total Per Person: $ " + totalPerPerson);
+        System.out.println("Total Tip: $" + totalTip);
+        System.out.println("Total Bill: $" + totalBill);
+        System.out.println("Total Tip Per Person: $" + tipPerPerson);
+        System.out.println("Total Total Per Person: $" + totalPerPerson);
         System.out.println("---------------------");
 
     }
