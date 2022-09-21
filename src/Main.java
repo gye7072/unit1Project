@@ -20,10 +20,10 @@ public class Main {
 
         //calculate values
         //Math.round(x*100.0)/100.0 rounds the value(x) to the nearest hundredth place
-        double totalTip = Math.round(bill * (tipPercent/100.0 * 100.0))/100.0;
-        double totalBill = Math.round(( bill + totalTip)*100.0)/100.0;
-        double tipPerPerson = Math.round(totalTip/numPeople * 100.0)/100.0;
-        double totalPerPerson = Math.round(totalBill/numPeople * 100.0)/100.0;
+        double totalTip = Math.round(bill * (tipPercent/100.00 * 100.00))/100.00;
+        double totalBill = Math.round(( bill + totalTip)*100.00)/100.00;
+        double tipPerPerson = Math.round(totalTip/numPeople * 100.00)/100.00;
+        double totalPerPerson = Math.round(totalBill/numPeople * 100.00)/100.00;
 
         //display values
         System.out.println();
