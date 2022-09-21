@@ -1,19 +1,25 @@
+//used to obtain user input
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-
+        //used to obtain user input
         Scanner s = new Scanner(System.in);
-        //set variables and ask for user input
+
+        //used for formatting
         System.out.println("---------------------");
+
+        //asking for user input to set variables
         System.out.print("Please input your bill: ");
         double bill = s.nextDouble();
         System.out.print("Please input the tip percentage(whole number without percentage sign): ");
         double tipPercent = s.nextDouble();
         System.out.print("Please input the number of people in the party: ");
         int numPeople = s.nextInt();
+
         System.out.println("---------------------");
 
-        //calculate values using variables
+        //calculate values
+        //Math.round(x*100.0)/100.0 rounds the value(x) to the nearest hundredth place
         double totalTip = Math.round(bill * (tipPercent/100.0 * 100.0))/100.0;
         double totalBill = Math.round(( bill + totalTip)*100.0)/100.0;
         double tipPerPerson = Math.round(totalTip/numPeople * 100.0)/100.0;
