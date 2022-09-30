@@ -1,4 +1,5 @@
 //used to obtain user input
+import java.text.DecimalFormat;
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
@@ -19,19 +20,22 @@ public class Main {
         System.out.println("---------------------");
 
         //calculate values
-        //Math.round(x*100.0)/100.0 rounds the value(x) to the nearest hundredth place
-        double totalTip = Math.round(bill * (tipPercent/100.00 * 100.00))/100.00;
-        double totalBill = Math.round(( bill + totalTip)*100.00)/100.00;
-        double tipPerPerson = Math.round(totalTip/numPeople * 100.00)/100.00;
-        double totalPerPerson = Math.round(totalBill/numPeople * 100.00)/100.00;
+        // DecimalFormat rounds the values to the nearest hundredth place
+        DecimalFormat df = new DecimalFormat("#.00");
+        double totalTip = (bill * (tipPercent/100.00));
+        double totalBill = (bill + totalTip);
+        double tipPerPerson = (totalTip/numPeople);
+        double totalPerPerson = (totalBill/numPeople);
+
+
 
         //display values
         System.out.println();
         System.out.println("---------------------");
-        System.out.println("Total Tip: $" + totalTip);
-        System.out.println("Total Bill: $" + totalBill);
-        System.out.println("Total Tip Per Person: $" + tipPerPerson);
-        System.out.println("Total Total Per Person: $" + totalPerPerson);
+        System.out.println("Total Tip: $" + df.format(totalTip));
+        System.out.println("Total Bill: $" + df.format(totalBill));
+        System.out.println("Total Tip Per Person: $" + df.format(tipPerPerson));
+        System.out.println("Total Total Per Person: $" + df.format(totalPerPerson));
         System.out.println("---------------------");
 
     }
